@@ -1,0 +1,45 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v2.3.0.json",
+  "config": {
+    "view": {
+      "height": 300,
+      "width": 400
+    }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hvo/datasets/master/nyc_zip.geojson"
+      },
+      "height": 300,
+      "mark": {
+        "fill": "lightgray",
+        "stroke": "white",
+        "type": "geoshape"
+      },
+      "width": 500
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/jazzzchan/data_vis_project/master/crimezip%20(1).csv"
+      },
+      "encoding": {
+        "color": {
+          "value": "steelblue"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "value": 10
+        }
+      },
+      "mark": "circle"
+    }
+  ]
+}
